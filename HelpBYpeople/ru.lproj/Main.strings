@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "74v-52-Nob"; */
+"74v-52-Nob.normalTitle" = "Login";
+
+/* Class = "UITextField"; placeholder = "e-mail"; ObjectID = "BnV-Zu-8bK"; */
+"BnV-Zu-8bK.placeholder" = "e-mail";
+
+/* Class = "UILabel"; text = "Welcome!"; ObjectID = "LxR-s9-GIx"; */
+"LxR-s9-GIx.text" = "Welcome!";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "S46-Ae-GTa"; */
+"S46-Ae-GTa.placeholder" = "password";
+
+/* Class = "UILabel"; text = "You are not a member?"; ObjectID = "be4-2N-HSY"; */
+"be4-2N-HSY.text" = "You are not a member?";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "kG9-l8-M3l"; */
+"kG9-l8-M3l.normalTitle" = "Register";

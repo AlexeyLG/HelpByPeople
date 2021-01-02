@@ -1,0 +1,45 @@
+/* 
+  Localizable.strings
+  HelpBYpeople
+
+  Created by Alexey on 11/22/20.
+  
+*/
+
+
+"Welcome" = "Welcome!";
+"Email" = "E-mail";
+"Password" = "Password";
+"Login" = "Login";
+"member" = "You are not a member?";
+"Register" = "Register";
+
+"Map" = "Map";
+"Profile" = "Profile";
+"locationManager.error" = "It is not possible to determine the location";
+
+"mail" = "mail";
+"logout" = "LogOut";
+
+"New User" = "New User";
+"Add Photo" = "Add photo";
+"User name" = "User name";
+
+"gps.off" = "Geolocation service is disabled!";
+"turn.gps.on" = "Do you want to turn on?";
+"settings" = "Settings";
+"cancel" = "Cancel";
+
+"help.request" = "Help request";
+"geocodeLocation.error" = "Geocode Location Error!";
+"no.placemark" = "Can't find placemark";
+
+"Camera" = "Camera";
+"Gallery" = "Gallery";
+"Cancel" = "Cancel";
+
+"incident.name" = "Incident name";
+"incident.description" = "Incident description";
+"enter.address" = "Enter address or set pin";
+"add.photo" = "Add photo";
+

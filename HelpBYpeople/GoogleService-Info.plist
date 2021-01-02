@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>480364250462-t1urda2liptf27grilit75ktl3dmalit.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.480364250462-t1urda2liptf27grilit75ktl3dmalit</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCDNwiM8r5e-d3OBqTi5ByAh8cuAZ0L8wM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>480364250462</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.grebennikov.HelpBYpeople</string>
+	<key>PROJECT_ID</key>
+	<string>helpbypeople-79244</string>
+	<key>STORAGE_BUCKET</key>
+	<string>helpbypeople-79244.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:480364250462:ios:34748b297270b3a3107bcf</string>
+	<key>DATABASE_URL</key>
+	<string>https://helpbypeople-79244.firebaseio.com</string>
+</dict>
+</plist>

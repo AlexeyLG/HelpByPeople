@@ -1,0 +1,44 @@
+/* 
+  Localizable.strings
+  HelpBYpeople
+
+  Created by Alexey on 11/22/20.
+  
+*/
+
+"Welcome" = "Добро пожаловать!";
+"Email" = "Электронная почта";
+"Password" = "Пароль";
+"Login" = "Вход";
+"member" = "Нет аккаунта?";
+"Register" = "Регистрация";
+
+"Map" = "Карта";
+"Profile" = "Профиль";
+"locationManager.error" = "Не возможно определить местоположение";
+
+"mail" = "почта";
+"logout" = "Выйти";
+
+"New User" = "Новый пользователь";
+"Add Photo" = "Добавить фото";
+"User name" = "Имя пользователя";
+
+"gps.off" = "Служба геолокации выключена!";
+"turn.gps.on" = "Хотите включить?";
+"settings" = "Настройки";
+"cancel" = "Отмена";
+
+"help.request" = "Запрос о помощи";
+"geocodeLocation.error" = "Ошибка геокодирования локации";
+"no.placemark" = "Точка не найдена";
+
+"Camera" = "Камера";
+"Gallery" = "Галерея";
+"Cancel" = "Отмена";
+
+"incident.name" = "Событие";
+"incident.description" = "Описание события";
+"enter.address" = "Введите адрес";
+"add.photo" = "Добавить фото";
+
