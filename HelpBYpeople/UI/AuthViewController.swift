@@ -31,6 +31,7 @@ class AuthViewController: UIViewController {
         emailTextField.placeholder = L10n("Email")
         passwordTextField.placeholder = L10n("Password")
         loginButton.setTitle(L10n("Login"), for: .normal)
+        loginButton.roundCorners()
         memberLabel.text = L10n("member")
         registerButton.setTitle(L10n("Register"), for: .normal)
         
