@@ -21,6 +21,7 @@ class HelpRequestViewController: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var createAnnotationIndicator: UIActivityIndicatorView!
     @IBOutlet weak var findAddressTextField: UITextField!
+    @IBOutlet weak var userLocationButton: UIButton!
     
     // MARK: - Properties
     
@@ -45,6 +46,8 @@ class HelpRequestViewController: UIViewController {
         incDescriptionTextField.placeholder = L10n("incident.description")
         addIncPhotoButton.setTitle(L10n("add.photo"), for: .normal)
         findAddressTextField.placeholder = L10n("enter.address")
+        
+        userLocationButton.layer.cornerRadius = 25.0
         
         createAnnotationIndicator.isHidden = true
         

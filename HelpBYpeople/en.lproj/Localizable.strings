@@ -8,22 +8,28 @@
 
 
 "Welcome" = "Welcome!";
-"Email" = "E-mail";
-"Password" = "Password";
+"add.email" = "Add a e-mail";
+"add.password" = "Add a password";
 "Login" = "Login";
 "member" = "You are not a member?";
 "Register" = "Register";
+
+"E-mail" = "E-mail";
+"Password" = "Password";
 
 "Map" = "Map";
 "Profile" = "Profile";
 "locationManager.error" = "It is not possible to determine the location";
 
+"user.name" = "USER NAME";
+"user.email" = "E-MAIL";
+"user.password" = "PASSWORD";
 "mail" = "mail";
 "logout" = "LogOut";
 
 "New User" = "New User";
 "Add Photo" = "Add photo";
-"User name" = "User name";
+"add.user.name" = "Add a user name";
 
 "gps.off" = "Geolocation service is disabled!";
 "turn.gps.on" = "Do you want to turn on?";
@@ -43,3 +49,12 @@
 "enter.address" = "Enter address or set pin";
 "add.photo" = "Add photo";
 
+"Error" = "Error";
+"Ok" = "Ok";
+
+"valid.user.name" = "Valid name";
+"valid.user.email" = "Valid e-mail";
+"valid.user.password" = "Valid password";
+"not.valid.user.name" = "Not a valid name";
+"not.valid.user.email" = "Not a valid e-mail";
+"not.valid.user.password" = "Not a valid password";

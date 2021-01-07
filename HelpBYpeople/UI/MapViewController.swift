@@ -23,7 +23,7 @@ class MapViewController: UIViewController {
     var annotations = [MapAnnotation]()
 
     // MARK: - Lifecycle
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,7 +36,7 @@ class MapViewController: UIViewController {
             mapView.restrictMap(MapViewController.locationBelarus)
         }
         
-        tabBarItem.title = L10n("Map") 
+        tabBarItem.title = L10n("Map")
         
         observeAnnotations()
     }

@@ -14,29 +14,43 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var addPhotoButton: UIButton!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var userEmailTextField: UITextField!
+    @IBOutlet weak var userPasswordTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var createUserIndicator: UIActivityIndicatorView!
     @IBOutlet weak var topSpaceConstraint: NSLayoutConstraint!
+    @IBOutlet weak var validationUserName: UILabel!
+    @IBOutlet weak var validationEmail: UILabel!
+    @IBOutlet weak var validationPassword: UILabel!
+    @IBOutlet weak var userNameTitleLabel: UILabel!
+    @IBOutlet weak var userEmailTitleLabel: UILabel!
+    @IBOutlet weak var userPasswordTitleLabel: UILabel!
     
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
+        userEmailTextField.delegate = self
+        userPasswordTextField.delegate = self
         userNameTextField.delegate = self
         
         navigationItem.title = L10n("New User")
         addPhotoButton.setTitle(L10n("Add Photo"), for: .normal)
-        emailTextField.placeholder = L10n("Email")
-        passwordTextField.placeholder = L10n("Password")
-        userNameTextField.placeholder = L10n("User name")
+        userEmailTextField.placeholder = L10n("add.email")
+        userPasswordTextField.placeholder = L10n("add.password")
+        userNameTextField.placeholder = L10n("add.user.name")
+        userNameTitleLabel.text = L10n("user.name")
+        userPasswordTitleLabel.text = L10n("user.password")
+        userEmailTitleLabel.text = L10n("user.email")
         
         subscribeForKeyboardnotifications()
         createUserIndicator.isHidden = true
+        
+        //Validation
+        userNameTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
+        userEmailTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
+        userPasswordTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
         
         //UITapGestureRecognizer
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -64,13 +78,14 @@ class RegisterViewController: UIViewController {
     // MARK: - Private
     
     private func createNewUser() {
-        
-        guard let email = emailTextField.text,
-              let password = passwordTextField.text,
+       
+        guard let email = userEmailTextField.text,
+              let password = userPasswordTextField.text,
               let userName = userNameTextField.text,
               let image = photoImageView.image ?? UIImage(named: "defaultPhoto.jpg"),
               !email.isEmpty, !password.isEmpty, !userName.isEmpty
         else { return }
+ 
         
         createUserIndicator.isHidden = false
         createUserIndicator.startAnimating()
@@ -151,9 +166,36 @@ class RegisterViewController: UIViewController {
         presentPhotoActionMenu()
     }
     
+    @objc fileprivate func handleTextChange() {
+        guard let userName = userNameTextField.text,
+              let email = userEmailTextField.text,
+              let password = userPasswordTextField.text
+        else { return }
+        
+        if userName.isValid(String.ValidityType.name) {
+            validationUserName.text = L10n("valid.user.name")
+        } else {
+            validationUserName.isHidden = false
+            validationUserName.text = L10n("not.valid.user.name")
+        }
+        
+        if email.isValid(String.ValidityType.email) {
+            validationEmail.text = L10n("valid.user.email")
+        } else {
+            validationEmail.isHidden = false
+            validationEmail.text = L10n("not.valid.user.email")
+        }
+        
+        if password.isValid(String.ValidityType.name) {
+            validationPassword.text = L10n("valid.user.password")
+        } else {
+            validationPassword.isHidden = false
+            validationPassword.text = L10n("not.valid.user.password")
+        }
+    }
     
     // MARK: - Keyboard Utils
-    
+   
     private func subscribeForKeyboardnotifications() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(didRecieveKeyboardWillShow(notification:)),
@@ -165,7 +207,7 @@ class RegisterViewController: UIViewController {
                                                name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
     }
-    
+   
     @objc private func didRecieveKeyboardWillShow(notification: Notification) {
         print("will show keyboard")
         adjustContentPosition(show: true, notfication: notification)
@@ -197,15 +239,17 @@ class RegisterViewController: UIViewController {
 extension RegisterViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == emailTextField {
-            passwordTextField.becomeFirstResponder()
-        } else if textField == passwordTextField {
+        
+        if textField == userEmailTextField {
+            userPasswordTextField.becomeFirstResponder()
+        } else if textField == userPasswordTextField {
             userNameTextField.becomeFirstResponder()
         } else if textField == userNameTextField {
             self.view.endEditing(true)
         }
         return true
     }
+    
 }
 
     // MARK: - UIImagePickerControllerDelegate
@@ -219,7 +263,6 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
         } else {
             photoImageView.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         }
-        
         picker.dismiss(animated: true, completion: nil)
     }
     

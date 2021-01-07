@@ -28,7 +28,7 @@ class AuthViewController: UIViewController {
         passwordTextField.delegate = self
         
         welcomeLabel.text = L10n("Welcome")
-        emailTextField.placeholder = L10n("Email")
+        emailTextField.placeholder = L10n("E-mail")
         passwordTextField.placeholder = L10n("Password")
         loginButton.setTitle(L10n("Login"), for: .normal)
         loginButton.roundCorners()
