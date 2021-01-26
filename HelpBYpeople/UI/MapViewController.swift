@@ -23,7 +23,7 @@ class MapViewController: UIViewController {
     var annotations = [MapAnnotation]()
 
     // MARK: - Lifecycle
-   
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

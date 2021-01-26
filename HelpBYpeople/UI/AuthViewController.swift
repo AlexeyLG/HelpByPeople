@@ -18,9 +18,9 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var memberLabel: UILabel!
     @IBOutlet weak var registerButton: UIButton!
-        
+    
     // MARK: - Lifecycle
-
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,10 +34,11 @@ class AuthViewController: UIViewController {
         loginButton.roundCorners()
         memberLabel.text = L10n("member")
         registerButton.setTitle(L10n("Register"), for: .normal)
-        
+    
         //UITapGestureRecognizer
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AuthViewController.dismissKeyboard))
             view.addGestureRecognizer(tap)
+        
     }
     
     // MARK: - Actions
@@ -86,3 +87,5 @@ extension AuthViewController: UITextFieldDelegate {
         return true
     }
 }
+
+

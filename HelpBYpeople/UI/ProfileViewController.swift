@@ -21,10 +21,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var logOutButton: UIButton!
     
     // MARK: - Lifecycle
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
         tabBarItem.title = L10n("Profile")
     }
 

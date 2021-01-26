@@ -240,11 +240,11 @@ extension RegisterViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if textField == userEmailTextField {
+        if textField == userNameTextField {
+            userEmailTextField.becomeFirstResponder()
+        } else if textField == userEmailTextField {
             userPasswordTextField.becomeFirstResponder()
         } else if textField == userPasswordTextField {
-            userNameTextField.becomeFirstResponder()
-        } else if textField == userNameTextField {
             self.view.endEditing(true)
         }
         return true
